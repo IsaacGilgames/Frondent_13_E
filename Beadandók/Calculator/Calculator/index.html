@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Számológép</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="szamologep">
+        <input type="text" class="display" id="display" disabled />
+        <div class="gombok">
+            <button onclick="torles()">C</button>
+            <button onclick="operator('÷')">÷</button>
+            <button onclick="operator('*')">×</button>
+            <button onclick="operator('-')">-</button>
+
+            <button onclick="pluszSzam('7')">7</button>
+            <button onclick="pluszSzam('8')">8</button>
+            <button onclick="pluszSzam('9')">9</button>
+            <button onclick="operator('+')">+</button>
+
+            <button onclick="pluszSzam('4')">4</button>
+            <button onclick="pluszSzam('5')">5</button>
+            <button onclick="pluszSzam('6')">6</button>
+
+            <button class="egyenlo" onclick="szamol()">=</button>
+            <button onclick="pluszSzam('1')">1</button>
+            <button onclick="pluszSzam('2')">2</button>
+            <button onclick="pluszSzam('3')">3</button>
+
+            <button class="null" onclick="pluszSzam('0')">0</button>
+            <button onclick="pont()">.</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

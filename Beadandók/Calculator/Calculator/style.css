@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.szamologep {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.display {
+    width: 95%;
+    height: 50px;
+    background-color: #e0e0e0;
+    border: none;
+    text-align: right;
+    font-size: 2em;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.gombok {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px;
+}
+
+button {
+    font-size: 1.5em;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.null {
+    grid-column: span 3; 
+}
+
+button:active {
+    background-color: #d0d0d0;
+}
+
+button.egyenlo {
+    grid-column: span 1; 
+    grid-row: span 2;
+    background-color: #4caf50;
+    color: white;
+}

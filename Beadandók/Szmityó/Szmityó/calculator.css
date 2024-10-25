@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+}
+
+*:focus {
+    outline: none;
+}
+
+Input{
+    cursor:default;
+}
+
+Body{
+    background-color: #080808;
+}
+
+Button{
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    color: white;
+    font-size: min(2vw);
+    font-size: auto;
+    cursor: pointer;
+    box-shadow: none;
+}
+
+.MainDiv{
+    margin: 20px 5% 0% 5%;
+    padding: 1.4%;
+    background-color: rgba(159, 0, 98, 0.262);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0.1px solid red;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+    border-bottom-left-radius: 22%;
+    border-bottom-right-radius: 22%;
+}
+
+.RowDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    width: 65vw;
+    height: 7vh;
+}
+
+.ColDiv{
+    display: block;
+    flex-direction: column;
+    border: 3px solid white;
+    width: 100vw;
+    height: 100%;
+}
+
+.ResultDiv{
+    background-color: darkslategrey;
+    display: block;
+    flex-direction: column;
+    border: 2px solid white;
+    height: 8vh;
+    width: 80vw;
+    font-size: 2.5vw;
+}
+
+.TTmain{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    border: 2px solid white;
+    width: 100%;
+    height: 20vh;
+}
+
+.TTRow{
+    display: flex;
+    margin: 0 0 0 5%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 20vh;
+    width: 90vw;
+    border: 2px solid white;
+    
+}
+
+.TTCol{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border: 2px solid white;
+    align-items: center;
+    justify-content: center;
+}
+
+.nyomogomb{
+    width: 100%;
+    height: 100%;
+    color: black;
+    font-size: 5vw;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    box-shadow: none;
+    border: solid;
+}
+
+#ujrakezd{
+    width: 80%;
+    height: 70%;
+    border-radius: 1vw;
+    border-color: blue;
+    border-width: 10px;
+    font-size: auto;
+    background-color: cornflowerblue;
+}
+#nyero, #kovi{
+    color:cornflowerblue;
+    font-size: auto;
+    font-size: min(4vw);
+}
+
+/*----------------------------------------------------------------*/
+.ModeDiv{
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    flex-flow: row;
+    align-items: center;
+    width: 60vw;
+    height: 10vh;
+    margin-left: 20vw;
+}
+
+.Mode{
+    display: block;
+    flex-direction: column;
+    width: 100vw;
+    height: 10vh;
+    margin: 30px;
+    color: white;
+}

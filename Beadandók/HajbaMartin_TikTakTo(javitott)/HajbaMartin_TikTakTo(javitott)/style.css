@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('roboto.eot'); /* IE9 Compat Modes */
+    src: url('roboto.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('roboto.woff') format('woff'), /* Modern Browsers */
+    url('roboto.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('roboto.svg#svgFontName') format('svg'); /* Legacy iOS */
+  }
+  
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;   
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1f1f1f;
+    font-family: "Roboto", sans-serif;
+    color: whitesmoke;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: whitesmoke;
+    border: 2px solid #333;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#restartButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.hidden {
+    display: none;
+}
+
+#winningMessage {
+    font-size: 2rem;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.x {
+    color: #008080;
+}
+
+.o {
+    color: #FF6F61;
+}

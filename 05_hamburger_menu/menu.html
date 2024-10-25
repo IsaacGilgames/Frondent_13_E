@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        :root{
+            --background: #213A57;
+            --font-color: #80ED99;
+            --button-color: #0AD1C8;
+            --nav-color: #0B6477;
+            --line-color: #45DFB1;
+        }
+        body{
+            background-color: var(--background);
+        }
+
+        main{
+            height: 1000px;
+        }
+
+
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            margin: auto;
+            background-color: var(--nav-color);
+            width: 100vw;
+            height: auto;
+            position: sticky;
+            top: 0px;
+            padding-left: 20px;
+        }
+
+        nav a {
+            display: none;
+            font-family: "Protest Guerrilla", sans-serif;
+            font-size: 2rem;
+            text-decoration: none;
+            padding: 20px 0;
+
+        }
+
+        nav a.open {
+            display: block;
+        }
+
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 20px;
+            width: 20px;
+            padding: 20px 0;
+        }
+
+        .hamburger div {
+            width: 100%;
+            margin: 2px;
+            border: 3px solid black;
+            border-radius: 3px;
+            transition: all 0.5s;
+        }
+
+        .hamburger.open div:first-child{
+            position: relative;
+            top: 5px;
+            transform: rotate(45deg);
+            transition: all 0.5s;
+        }
+
+        .hamburger.open div:last-child{
+            position: relative;
+            bottom: 5px;
+            transform: rotate(-45deg);
+            transition: all 0.5s;
+        }
+
+        .hamburger.open div:nth-child(2){
+            display: none;
+            transition: all 0.5s;
+        }
+
+        a:hover{
+            zoom: 2;
+        }
+
+
+
+
+
+
+        @media screen and (min-width: 600px) {
+            nav {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+                width: 70vw;                    /**/
+                transform: skewx(25deg);        /**/
+                box-shadow: -10px -10px 10px 0px rgba(0, 0, 0, 0.5);
+                top: 20px;
+                /*shift + alt + f*/
+            }
+            .hamburger{
+                display: none;
+            }
+            nav a {
+                display: block;
+                transform: skewx(-25deg);       /**/
+                
+            }
+
+            a:hover{
+            zoom: 1;
+            }
+
+            a::before{
+                content: "";
+                display: block;
+                position: absolute;
+                height: 2px;
+                width: 0px;
+                background-color: var(--line-color);
+                transition: all 0.5s;
+                top: 3.4rem;
+                left: 50%;
+            }
+
+            a:hover::before{
+                width: 50%;
+                transition: all 0.5s;
+                top: 3.4rem;
+                left: 50%;
+            }
+
+
+            a::after{
+                content: "";
+                display: block;
+                position: absolute;
+                height: 2px;
+                width: 0px;
+                background-color: var(--line-color);
+                transition: all 0.5s;
+                top: 3.4rem;
+                left: 50%;
+            }
+
+            
+            a:hover::after{
+                width: 50%;
+                transition: all 0.5s;
+                top: 3.4rem;
+                left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <a href="#">Kezdőlap</a>
+        <a href="#">Galéria</a>
+        <a href="#">Árak</a>
+        <a href="#">Rólunk</a>
+        <a href="#">Elérhetőség</a>
+    </nav>
+    <main>
+
+    </main>
+
+    <script>
+        let menuItems = document.querySelectorAll("nav a");
+        let menuToggler = document.querySelector(".hamburger");
+
+        menuToggler.onclick = function () {
+            menuToggler.classList.toggle("open");
+            let s = 0;
+            for (let menuItem of menuItems) {
+                setTimeout(function(){
+                    menuItem.classList.toggle("open");
+                }, s);
+                s+=20;
+            }
+        }
+    </script>
+</body>
+
+</html>

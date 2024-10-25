@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+   
+    background: linear-gradient(135deg, #d18484, #102158);
+    width: 100vw;
+    height: 100vh;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #102158, #3A86FF);
+    padding: 15px 20px;
+    height: 100px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.navBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.navBar a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 50px;
+    cursor: pointer;
+}
+
+#tictactoe {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.cell {
+    background-color: #3A86FF;    
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: black;
+    cursor: pointer;
+}
+
+input {
+    padding: 8px 10px;
+    text-align: right;
+    font-size: 30px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button {
+    background-color: #3A86FF;
+    color: white;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #2A65CC;
+}
+
+.clear-btn {
+    height: 6vh;
+    margin-top: 10px;
+    grid-column: span 4;
+    background-color: #ffcccc; 
+}
+
+.show-player {
+    margin-top: 20px;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    background-color: rgba(58, 134, 255, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    height: 11vh;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    margin: 30px;
+}
+
+.win {
+    font-size: 48px;
+    color: white;
+    text-align: center;
+    background-color: rgba(58, 134, 255, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    height: 11vh;
+    margin: 50px auto 0 auto; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70vw;
+    line-height: 11vh; 
+}

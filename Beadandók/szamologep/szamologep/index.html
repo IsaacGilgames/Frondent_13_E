@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Számológép</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <div class="szamologep">
+        <input type="text" id="kijelzo" disabled>
+
+        <div class="gombok alap">
+            <button onclick="kijelzoTorles()" class="span-3 voros">C</button>
+            <button onclick="kijelez('/')">/</button>
+            <button onclick="kijelez('7')">7</button>
+            <button onclick="kijelez('8')">8</button>
+            <button onclick="kijelez('9')">9</button>
+            <button onclick="kijelez('*')">x</button>
+            <button onclick="kijelez('6')">6</button>
+            <button onclick="kijelez('5')">5</button>
+            <button onclick="kijelez('4')">4</button>
+            <button onclick="kijelez('-')">-</button>
+            <button onclick="kijelez('3')">3</button>
+            <button onclick="kijelez('2')">2</button>
+            <button onclick="kijelez('1')">1</button>
+            <button onclick="kijelez('+')">+</button>
+            <button onclick="kijelez('.')">,</button>
+            <button onclick="kijelez('0')">0</button>
+            <button onclick="kiszamol()" class="span-2 voros">=</button>
+        </div>
+
+        <div class="gombok tudomanyos">
+            <button onclick="kijelzoTorles()" class="voros">C</button>
+            <button onclick="kijelez('&#40')">(</button>
+            <button onclick="kijelez('&#41')">)</button>    
+            <button onclick="kijelez('Math.sqrt(')">√</button>
+            <button onclick="kijelez('Math.abs(')">|x|</button>
+            <button onclick="kijelez('7')">7</button>
+            <button onclick="kijelez('8')">8</button>
+            <button onclick="kijelez('9')">9</button>
+            <button onclick="kijelez('/')">/</button>
+            <button onclick="kijelez('**2')">x²</button>
+            <button onclick="kijelez('4')">4</button>
+            <button onclick="kijelez('5')">5</button>
+            <button onclick="kijelez('6')">6</button>
+            <button onclick="kijelez('*')">x</button>
+            <button onclick="kijelez('**')">x^y</button>
+            <button onclick="kijelez('1')">1</button>
+            <button onclick="kijelez('2')">2</button>
+            <button onclick="kijelez('3')">3</button>
+            <button onclick="kijelez('-')">-</button>
+            <button onclick="kijelez('faktorialis(')">x!</button>
+            <button onclick="kijelez('.')">,</button>
+            <button onclick="kijelez('0')" class="span-2">0</button>
+            <button onclick="kijelez('+')">+</button>
+            <button onclick="kiszamol()" class="voros">=</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body{
+            display: grid;
+            grid-template-rows: 150px 400px 150px;
+            grid-template-columns: 200px auto 200px;
+            grid-template-areas:
+                "header header header"
+                "nav    main   aside"
+                "footer footer footer"
+            ;
+        }
+
+        @media screen and (max-width: 1000px){
+            body{
+                grid:
+                    "header" 150px
+                    "nav" 50px
+                    "main" 400px
+                    "footer" 20px
+                    /1fr
+            }
+
+            aside{
+                display: none;
+            }
+        }
+
+        header{
+            grid-area: header;
+            background-color: aqua;
+        }
+
+        nav{
+            grid-area: nav;
+            background-color: chocolate;
+        }
+
+        main{
+            grid-area: main;
+            background-color: blueviolet;
+        }
+
+        aside{
+            grid-area: aside;
+            background-color: darkgreen;
+        }
+
+        footer{
+            grid-area: footer;
+            background-color: hotpink;
+        }
+    </style>
+
+</head>
+<body>
+    <header>h</header>
+    <nav>n</nav>
+    <main>m</main>
+    <aside>a</aside>
+    <footer>f</footer>
+</body>
+</html>
