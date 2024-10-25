@@ -97,11 +97,21 @@ function displayMenuButtons(){
     })
     //console.log(categories)
     //gombok --> string
+    /*
     let gombok = categories.map(category => {
       btnContainer.innerHTML += `<button type="button" class="filter-btn" data-id="${category}">${category}</button>`
     });
     console.log(gombok)
     //btnContainer.innerHTML = gombok
+    */
+    categories.forEach(b => {
+      let button = document.createElement("button")
+      button.innerHTML = b
+      button.setAttribute('class', 'filter-btn')
+      button.setAttribute("id", b)
+      button.setAttribute("type", "button")
+      btnContainer.appendChild(button)
+    })
 
 
 
