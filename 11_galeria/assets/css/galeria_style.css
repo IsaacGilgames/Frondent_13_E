@@ -1,0 +1,41 @@
+#galeria{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    width: 100vw;
+}
+
+#galeria h1{
+    color: white;
+}
+
+.galeria_box img{
+    width: auto;
+    height: 300px;
+    padding: 10px 20px;
+    -webkit-box-reflect: below 0.5em linear-gradient(rgb(0 0 0 / 0), rgb(0 0 0 / 0.25));
+    transform-style: preserve-3d;
+    /*transform: rotateY(45deg);*/
+    /*transform: perspective(9cm)  rotateY(30deg)*/
+}
+
+.galeria_box{
+    display: flex;
+    width: 100%;
+    height: 70vh;
+    margin: 10px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    overflow: scroll;
+    scroll-snap-align: center;
+    scroll-snap-type: y mandatory;
+}
+
+
+
+
+
+
+

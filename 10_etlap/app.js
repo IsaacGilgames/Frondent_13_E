@@ -59,9 +59,9 @@ window.addEventListener("DOMContentLoaded", function () {
 
 function displayMenuItems(menuItems) {
   let displayMenuItem = []
-    menuItems.map(item => {
+  menuItems.map(item => {
     displayMenuItem.push(
-    `
+      `
     <article class="menu-item">
     <img src=${item.img} alt=${item.title} class="photo" />
     <div class="item-info">
@@ -87,33 +87,64 @@ function displayMenuItems(menuItems) {
 //a létrehozott függvény mindig csak a megfelelő elemeket
 //jelenítse meg. 
 
-function displayMenuButtons(){
-    var categories = ["all"];
-    menu.forEach((item) => {
+function displayMenuButtons() {
+  var categories = ["all"];
+  menu.forEach((item) => {
+
+    //console.log(item.category)
+    if (!categories.includes(item.category))
+      categories.push(item.category);
+  })
+  //console.log(categories)
+  //gombok --> string
+  /*
+  let gombok = categories.map(category => {
+    btnContainer.innerHTML += `<button type="button" class="filter-btn" data-id="${category}">${category}</button>`
+  });
+  console.log(gombok)
+  //btnContainer.innerHTML = gombok
+  */
+  categories.forEach(b => {
+    let button = document.createElement("button")
+    button.innerHTML = b
+    button.setAttribute('class', 'filter-btn')
+    button.setAttribute("id", b)
+    button.setAttribute("type", "button")
+    btnContainer.appendChild(button)
+  })
+
+  var buttons = document.querySelectorAll(".filter-btn")
+
+  buttons.forEach(button => {
+
+    button.onclick = function (event) {
+      /*
+      button.onclick = g => {
+      console.log(button)
+      }*/
+      //console.dir(event) esemény
+      //console.log(this)
+      console.log(button.id)
+      let kategoria = button.id
+      let cat_menu = []
+      menu.forEach(item => {
+        if(item.category === kategoria){
+          cat_menu.push(item)
+        }
+      })
+      console.log(cat_menu)
+      if(kategoria == "all"){
+        displayMenuItems(menu)
+      }
+      else{
+        displayMenuItems(cat_menu)
+      }
       
-      //console.log(item.category)
-      if(!categories.includes(item.category))
-          categories.push(item.category);
-    })
-    //console.log(categories)
-    //gombok --> string
-    /*
-    let gombok = categories.map(category => {
-      btnContainer.innerHTML += `<button type="button" class="filter-btn" data-id="${category}">${category}</button>`
-    });
-    console.log(gombok)
-    //btnContainer.innerHTML = gombok
-    */
-    categories.forEach(b => {
-      let button = document.createElement("button")
-      button.innerHTML = b
-      button.setAttribute('class', 'filter-btn')
-      button.setAttribute("id", b)
-      button.setAttribute("type", "button")
-      btnContainer.appendChild(button)
-    })
 
-    
+    }
+
+
+  })
 
 
 
@@ -122,7 +153,9 @@ function displayMenuButtons(){
 
 
 
-    
+
+
+
 }
 
 
